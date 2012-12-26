@@ -20,7 +20,7 @@ func main() {
 	days, present := monthdays["Aug"]                   // check the presence if element
 	fmt.Println("Presence of \"Aug\" is ", present, " it has ", days, " days")
 	
-	monthdays["Oct"] = 0, false       // delete an element
+	delete(monthdays, "oct")     // delete an element
 	
 	
 }
