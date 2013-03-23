@@ -24,7 +24,25 @@ func (l *List) insertAfter(n *Node, insert *Node) {
 	l.length++
 }
 
-func (l *List) remove()
+func (l *List) push(insert *Node) {
+	curr := l.head
+	for ; curr.next != nil; curr = curr.next {
+	}
+	if l.head == nil {
+		l.head = insert
+	}
+	curr.next = insert
+}
+
+func (l *List) remove(del *Node) {
+	for curr := l.head; curr.next != nil; curr = curr.next {
+		if curr.next == del {
+			curr.next = del.next
+			break
+		}
+	}
+	del = nil
+}
 
 type Node struct {
 	value int
@@ -32,5 +50,8 @@ type Node struct {
 }
 
 func main() {
-
+	a := new(List)
+	c := new(Node)
+	a.push(c)
+	fmt.Println(a)
 }
