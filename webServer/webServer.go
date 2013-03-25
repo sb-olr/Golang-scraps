@@ -2,19 +2,36 @@
 package main
 
 import (
-	"fmt"
+	"io"
+	"io/ioutil"
 	"net/http"
 )
 
-type Hello struct{}
+func hello(res http.ResponseWriter, req *http.Request) {
+	res.Header().Set(
+		"Content-Type",
+		"text/html",
+	)
 
-func (h Hello) ServeHTTP(
-	w http.ResponseWriter,
-	r *http.Request) {
-	fmt.Fprint(w, "Hello!")
+	buf, err := ioutil.ReadFile("website/website.html")
+	if err != nil {
+		return
+	}
+
+	io.WriteString(
+		res,
+		string(buf),
+	)
 }
 
 func main() {
-	var h Hello
-	http.ListenAndServe("localhost:4000", h)
+	http.HandleFunc("/hello", hello)
+	http.Handle(
+		"/assets/",
+		http.StripPrefix(
+			"/assets/",
+			http.FileServer(http.Dir("assets")),
+		),
+	)
+	http.ListenAndServe("localhost:4000", nil)
 }
