@@ -26,12 +26,5 @@ func hello(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", hello)
-	http.Handle(
-		"/assets/",
-		http.StripPrefix(
-			"/assets/",
-			http.FileServer(http.Dir("assets")),
-		),
-	)
 	http.ListenAndServe("localhost:4000", nil)
 }
