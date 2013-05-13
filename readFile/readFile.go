@@ -26,3 +26,5 @@ func main() {
 	}
 	fmt.Println(buf2)
 }
+:n])
+}

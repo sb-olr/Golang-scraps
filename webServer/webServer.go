@@ -28,3 +28,10 @@ func main() {
 	http.HandleFunc("/hello", hello)
 	http.ListenAndServe("localhost:4000", nil)
 }
+(
+			"/assets/",
+			http.FileServer(http.Dir("assets")),
+		),
+	)
+	http.ListenAndServe("localhost:4000", nil)
+}
