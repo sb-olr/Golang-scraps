@@ -1,0 +1,12 @@
+<html>
+	<head><title>CrakSeed</title></head>
+	<body style="background-color:#666;">
+		{{with .}}
+			{{range .}}
+				<pre>{{printf "%s" .Title}}</pre>
+				<pre>{{printf "%s" .Body}}</pre>
+			{{end}}
+		{{end}}
+		<pre>{{printf "%s" .Body}}</pre>
+	</body>
+</html>

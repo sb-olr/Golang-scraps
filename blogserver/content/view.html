@@ -1,0 +1,16 @@
+<html>
+	<h1>{{.Title}}</h1>
+	<div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+	<div><textarea name="Comments" rows="20" cols="40">
+		{{with .Comments}}
+		{{range .}}
+		{{.Title}}
+		{{printf "%s" .Body}}
+		{{end}}
+		{{end}}
+	</textarea></div>
+	<form action="" method="COMMENT">
+		<div><textarea name="commenting" rows="1" cols="80"></textarea></div>
+		<div><input type="submit" value="Comment"></div>
+	</form>
+</html>

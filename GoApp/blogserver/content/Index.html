@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" >
+    <meta name="author" content="NaHacker">
+    <meta name="revised" content="03/02/2012">
+    <meta name="description" content="Final">
+    <meta name="keywords" content="Final,Homepage,NaHacker">
+    <link rel="icon" type="image/x-png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/Index-style.css">
+    <link rel="stylesheet" href="/css/Styles.css">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="page">
+        <ul>
+          <li><abbr title="Home"><a href="/"><font style="color:yellow">Home</font></a></abbr></li>
+          <li><abbr title="Post"><a href="/html/new.html">Post</a></abbr></li>
+          <li><abbr title="List"><a href="/html/list.html">View</a></abbr></li>
+        </ul>
+      </div>
+	
+      <div id="header">
+        <h1 style="margin-top:0;margin-bottom:0;font-size:3em;text-align:center;">Home</h1>
+      </div>
+
+      <div id="menu">
+        <b>Menu</b><br />
+        HTML<br />
+        CSS<br />
+        JavaScript
+      </div>
+
+      <div id="content">
+        <div class="box-container">
+          <div id="try_this">
+            <div class="box">
+              <iframe src="/list" name="magnify_frame" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+
+<div id="circle">
+<pre>{{printf "Hello! %s" .}}</pre>
+</div>
+
+        <div class="box-container">
+
+          <div id="image_map">
+
+            <div class="box">
+
+              Click on the sun or on one of the planets to watch it closer:<br /><br />
+              <img src="/images/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" />
+              <map name="planetmap">
+                <abbr title="Sun"><area shape="rect" coords="0,0,82,126" alt="Sun" href="/html/sun.htm" target="magnify_frame" /></abbr>
+                <abbr title="Mercury"><area shape="circle" coords="90,58,3" alt="Mercury" href="/html/mercury.htm" target="magnify_frame" /></abbr>
+                <abbr title="Venus"><area shape="circle" coords="124,58,8" alt="Venus" href="/html/venus.htm" target="magnify_frame" /></abbr>
+              </map>
+              <iframe src="/html/sun.htm" name="magnify_frame" frameborder="0"></iframe>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="menu">
+
+        <b>Menu</b><br />
+        HTML<br />
+        CSS<br />
+        JavaScript
+
+      </div>
+
+      <div id="footer">
+        Made by NaHacker
+      </div>
+
+    </div>
+
+  </body>
+</html>
